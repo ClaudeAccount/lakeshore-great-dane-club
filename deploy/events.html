@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upcoming events and AKC-sanctioned specialty shows from the Lake Shore Great Dane Club in the Chicagoland area.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Events & Shows - Lake Shore Great Dane Club">
+    <meta property="og:description" content="Upcoming events and AKC-sanctioned specialty shows from the Lake Shore Great Dane Club in the Chicagoland area.">
+    <meta property="og:url" content="https://www.lakeshoregreatdaneclub.org/events.html">
+    <meta property="og:image" content="https://www.lakeshoregreatdaneclub.org/Lakeshore_logo_Final.png">
+    <meta property="og:site_name" content="Lake Shore Great Dane Club">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Events & Shows - Lake Shore Great Dane Club">
+    <meta name="twitter:description" content="Upcoming events and AKC-sanctioned specialty shows from the Lake Shore Great Dane Club in the Chicagoland area.">
+    <meta name="twitter:image" content="https://www.lakeshoregreatdaneclub.org/Lakeshore_logo_Final.png">
+    <title>Events & Shows - Lake Shore Great Dane Club</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation">
+        <div class="container">
+            <a href="index.html" class="nav-logo" aria-label="Lake Shore Great Dane Club Home">
+                <img src="Lakeshore_logo_Final.png" alt="Lake Shore Great Dane Club Logo" style="height:50px;width:auto;">
+                <div class="nav-logo-text">Lake Shore Great Dane Club<span>Est. Chicagoland</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-dropdown"><a href="#" class="active">About</a><ul class="nav-dropdown-menu"><li><a href="about.html">The Club</a></li><li><a href="events.html" class="active">Events</a></li><li><a href="membership.html">Membership</a></li><li><a href="specialties.html">Past Specialties</a></li></ul></li>
+                <li><a href="breed.html">Breed</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li class="nav-dropdown"><a href="#">Resources</a><ul class="nav-dropdown-menu"><li><a href="breeders.html">Club Breeder Directory</a></li><li><a href="health.html">Health Resources</a></li></ul></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="breed.html">Breed</a>
+        <a href="events.html" class="active">Events</a><a href="membership.html">Membership</a><a href="gallery.html">Gallery</a><a href="breeders.html">Breeder Directory</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="reveal">Events & Shows</h1>
+            <p class="lead reveal">From specialty shows to general meetings, there's always something happening</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Upcoming Events Section -->
+        <section class="section">
+            <div class="container">
+                <span class="section-label reveal">Upcoming</span>
+                <h2 class="reveal">Events</h2>
+                <div class="divider divider-center"></div>
+
+                <div class="grid-2" style="margin-top:var(--space-xl);gap:var(--space-xl);">
+                    <!-- Zoom Meetings -->
+                    <div class="card reveal" style="text-align:center;padding:var(--space-xl) var(--space-lg);">
+                        <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:var(--space-xs);">Regular</div>
+                        <h3 class="card-title" style="margin-bottom:var(--space-sm);">Membership Meetings</h3>
+                        <p style="font-size:0.95rem;color:var(--text-muted);">Connect with fellow Great Dane enthusiasts from the comfort of home via Zoom. Discuss club business, share breed knowledge, and build community. Meeting dates are announced on our Facebook page.</p>
+                        <div style="margin-top:var(--space-md);font-size:0.85rem;color:var(--text-muted);">
+                            <strong style="color:var(--heading);">Via Zoom</strong> · All are welcome
+                        </div>
+                    </div>
+
+                    <!-- Annual Specialty Show -->
+                    <div class="card reveal" style="text-align:center;padding:var(--space-xl) var(--space-lg);">
+                        <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:var(--space-xs);">Annual</div>
+                        <h3 class="card-title" style="margin-bottom:var(--space-sm);">Specialty Show</h3>
+                        <p style="font-size:0.95rem;color:var(--text-muted);">Our flagship AKC-sanctioned conformation show — Great Danes judged against the breed standard by approved specialist judges. Every club member volunteers to make this event a success.</p>
+                        <div style="margin-top:var(--space-md);font-size:0.85rem;color:var(--text-muted);">
+                            <strong style="color:var(--heading);">AKC Sanctioned</strong> · Dates on Facebook
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Announced Events (loaded from _data/events.json) -->
+        <div id="announced-events-wrap"></div>
+
+        <!-- About Our Shows Section -->
+        <section class="section" style="padding-top:var(--space-lg);">
+            <div class="container">
+                <span class="section-label reveal">Understanding</span>
+                <h2 class="reveal">About Our Shows</h2>
+                <div class="divider divider-center"></div>
+
+                <div class="reveal">
+                    <p class="lead">Specialty shows are a cornerstone of the purebred dog world. Unlike all-breed shows where many breeds compete, a specialty show focuses exclusively on one breed—in our case, the magnificent Great Dane. These events bring together exhibitors and judges who are deeply knowledgeable about the breed.</p>
+
+                    <p>At a specialty show, every Great Dane entry is evaluated against the official AKC breed standard. Judges look for the ideal Great Dane qualities: proper structure, movement, temperament, and the distinctive characteristics that make the breed great. These shows are sanctioned by the American Kennel Club and offer championship points toward titles.</p>
+
+                    <p>Specialty shows serve multiple purposes in our community. They celebrate breeding excellence and reward responsible breeding practices. They provide a venue for education—both for judges and exhibitors—about what the breed should be. And they bring together people who share a passion for Great Danes, fostering friendships and knowledge exchange that strengthen the entire breed.</p>
+
+                    <p>Whether you're a seasoned exhibitor or simply appreciate seeing beautiful, well-trained dogs, our specialty show is an event not to be missed.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meeting Info Section -->
+        <section class="section">
+            <div class="container">
+                <span class="section-label reveal">Community</span>
+                <h2 class="reveal">Regular Meetings</h2>
+                <div class="divider divider-center"></div>
+
+                <div class="grid-2">
+                    <div class="card reveal">
+                        <h3 class="card-title">General Membership Meetings</h3>
+                        <div class="card-text">
+                            <p>Our membership meetings are held via Zoom, making it convenient for members across the region to participate. Meeting dates are announced on our Facebook page — we're currently finalizing our regular meeting schedule, so follow us there for the latest updates.</p>
+                            <p>Meetings cover club business, breed education, show planning, and provide time for connecting with fellow enthusiasts. Guests are always welcome — reach out and we'll share the Zoom link.</p>
+                        </div>
+                    </div>
+
+                    <div class="card reveal">
+                        <h3 class="card-title">Board Meetings</h3>
+                        <div class="card-text">
+                            <p>Board meetings are held to discuss club operations, planning, and governance. The board is elected by the membership and meets to conduct the club's business on your behalf.</p>
+                            <p>If you're interested in club leadership or have topics you'd like the board to address, please reach out to the club president or attend a membership meeting to speak during open forum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Find a Show Section -->
+        <section class="section" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+            <div class="container">
+                <div class="text-center reveal" style="max-width:680px;margin:0 auto;">
+                    <span class="section-label">Experience the Breed</span>
+                    <h2>Find a Show Near You</h2>
+                    <div class="divider divider-center"></div>
+                    <p style="margin-top:var(--space-lg);font-size:1.1rem;line-height:1.8;">
+                        The best way to learn about Great Danes is to see them shown by the people who know and love the breed. Whether you're considering ownership, thinking about showing, or just want to see these dogs up close — find an AKC show near you and come watch.
+                    </p>
+                    <div style="margin-top:var(--space-xl);">
+                        <a href="https://infodog.com/show/state_shows.htm" target="_blank" rel="noopener" class="btn btn-primary">Find a Show on InfoDog</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="Lakeshore_logo_Final.png" alt="Lake Shore Great Dane Club Logo" style="height:50px;width:auto;">
+                    <p>The Lake Shore Great Dane Club is an AKC affiliate breed club dedicated to the advancement, education, and celebration of the Great Dane in the greater Chicagoland area.</p>
+                </div>
+                <div><h5>Quick Links</h5><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="breed.html">The Breed</a></li><li><a href="events.html">Events &amp; Shows</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+                <div><h5>Club Info</h5><ul class="footer-links"><li>Meetings via Zoom</li><li>Dates on Facebook</li><li>Annual Specialty Show</li><li>AKC Sanctioned</li></ul></div>
+                <div><h5>Connect</h5><ul class="footer-links"><li><a href="https://www.facebook.com/profile.php?id=61561029067871" target="_blank" rel="noopener">Facebook</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="https://gdca.org" target="_blank" rel="noopener">GDCA</a></li><li><a href="https://www.akc.org" target="_blank" rel="noopener">AKC</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lake Shore Great Dane Club, Inc. All rights reserved.</p>
+                <div class="footer-social"><a href="https://www.facebook.com/profile.php?id=61561029067871" target="_blank" rel="noopener" aria-label="Facebook">FB</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>if(window.netlifyIdentity){window.netlifyIdentity.on("init",u=>{if(!u){window.netlifyIdentity.on("login",()=>{document.location.href="/admin/"})}})}</script>
+    <script src="js/main.js"></script>
+    <script>
+    // Load announced events from CMS data file
+    fetch('/_data/events.json')
+      .then(r => r.json())
+      .then(data => {
+        const items = (data.items || []);
+        if (!items.length) return;
+        const typeColors = {
+          'Specialty Show': 'var(--gold-dark)',
+          'Fun Match':      'var(--blue)',
+          'Meeting':        'var(--text-muted)',
+          'Seminar':        'var(--blue-dark)',
+          'Other':          'var(--text-muted)'
+        };
+        let cards = items.map(ev => {
+          const color = typeColors[ev.type] || 'var(--text-muted)';
+          const btn = ev.link_url ? `<div style="margin-top:var(--space-md);"><a href="${ev.link_url}" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:0.85rem;">${ev.link_text || 'More Info'}</a></div>` : '';
+          const loc = ev.location ? `<div style="margin-top:var(--space-xs);font-size:0.85rem;color:var(--text-muted);">📍 ${ev.location}</div>` : '';
+          const time = ev.time ? ` · ${ev.time}` : '';
+          const desc = ev.description ? `<p style="font-size:0.95rem;color:var(--text-muted);margin-top:var(--space-sm);">${ev.description}</p>` : '';
+          return `<div class="card reveal" style="text-align:center;padding:var(--space-xl) var(--space-lg);">
+            <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:${color};margin-bottom:var(--space-xs);">${ev.type || 'Event'}</div>
+            <h3 class="card-title" style="margin-bottom:var(--space-sm);">${ev.title}</h3>
+            <div style="font-size:0.9rem;color:var(--heading);font-weight:600;">${ev.date}${time}</div>
+            ${loc}${desc}${btn}
+          </div>`;
+        }).join('');
+        const cols = items.length === 1 ? 'grid-template-columns:1fr;max-width:500px;margin:0 auto;' : '';
+        document.getElementById('announced-events-wrap').innerHTML = `
+          <section class="section" style="background:var(--gold-subtle);border-top:1px solid var(--border);">
+            <div class="container">
+              <span class="section-label reveal">Save the Date</span>
+              <h2 class="reveal">Announced Events</h2>
+              <div class="divider divider-center"></div>
+              <div class="grid-2" style="margin-top:var(--space-xl);gap:var(--space-xl);${cols}">${cards}</div>
+            </div>
+          </section>`;
+      })
+      .catch(() => {});
+    </script>
+</body>
+</html>

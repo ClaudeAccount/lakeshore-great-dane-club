@@ -1,0 +1,107 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+
+  # ── UPCOMING EVENTS ──────────────────────────────────────────────────────────
+  - name: "events"
+    label: "Upcoming Events"
+    files:
+      - name: "events"
+        label: "Events List"
+        file: "_data/events.json"
+        format: json
+        fields:
+          - label: "Events"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.date}}"
+            fields:
+              - { label: "Event Title",   name: "title",       widget: "string" }
+              - { label: "Type",          name: "type",        widget: "select",
+                  options: ["Specialty Show","Fun Match","Meeting","Seminar","Other"],
+                  default: "Other" }
+              - { label: "Date",          name: "date",        widget: "string",
+                  hint: "e.g. Saturday, May 15, 2026" }
+              - { label: "Time",          name: "time",        widget: "string",
+                  required: false, hint: "e.g. 9:00 AM" }
+              - { label: "Location",      name: "location",    widget: "string",
+                  required: false, hint: "Venue name and city" }
+              - { label: "Description",   name: "description", widget: "text",
+                  required: false }
+              - { label: "Button Label",  name: "link_text",   widget: "string",
+                  required: false, hint: "e.g. More Info — leave blank for no button" }
+              - { label: "Button URL",    name: "link_url",    widget: "string",
+                  required: false }
+
+  # ── BREEDER DIRECTORY ────────────────────────────────────────────────────────
+  - name: "breeders"
+    label: "Breeder Directory"
+    files:
+      - name: "breeders"
+        label: "Breeder Listings"
+        file: "_data/breeders.json"
+        format: json
+        fields:
+          - label: "Breeders"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.kennel}} — {{fields.name}}"
+            fields:
+              - { label: "Kennel Name",     name: "kennel",   widget: "string" }
+              - { label: "Breeder Name(s)", name: "name",     widget: "string" }
+              - { label: "City, State",     name: "location", widget: "string",
+                  required: false }
+              - { label: "Email",           name: "email",    widget: "string",
+                  required: false }
+              - { label: "Phone",           name: "phone",    widget: "string",
+                  required: false }
+              - { label: "Website",         name: "website",  widget: "string",
+                  required: false, hint: "Full URL including https://" }
+              - { label: "About",           name: "about",    widget: "text",
+                  required: false, hint: "Short description of breeding program" }
+
+  # ── PAST SPECIALTIES ─────────────────────────────────────────────────────────
+  - name: "specialties"
+    label: "Past Specialties"
+    files:
+      - name: "specialties"
+        label: "Specialty Show Results"
+        file: "_data/specialties.json"
+        format: json
+        fields:
+          - label: "Specialty Shows"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.year}} Specialty"
+            fields:
+              - { label: "Year",              name: "year",     widget: "string",
+                  hint: "e.g. 2025" }
+              - { label: "Date",              name: "date",     widget: "string",
+                  required: false, hint: "e.g. June 12, 2025" }
+              - { label: "Location",          name: "location", widget: "string",
+                  required: false }
+              - { label: "Judge",             name: "judge",    widget: "string",
+                  required: false }
+              - { label: "Best of Breed",     name: "bob",      widget: "string",
+                  required: false }
+              - { label: "Best of Opp. Sex",  name: "bos",      widget: "string",
+                  required: false }
+              - { label: "Best of Winners",   name: "bow",      widget: "string",
+                  required: false }
+              - { label: "Winners Dog",       name: "wd",       widget: "string",
+                  required: false }
+              - { label: "Winners Bitch",     name: "wb",       widget: "string",
+                  required: false }
+              - { label: "Award of Merit 1",  name: "aom1",     widget: "string",
+                  required: false }
+              - { label: "Award of Merit 2",  name: "aom2",     widget: "string",
+                  required: false }
+              - { label: "Notes",             name: "notes",    widget: "text",
+                  required: false }
+              - { label: "Photo Gallery Link",name: "photos",   widget: "string",
+                  required: false, hint: "Link to Facebook album or photo gallery" }
