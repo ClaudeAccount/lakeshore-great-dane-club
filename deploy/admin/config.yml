@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "images/uploads"
+media_folder: "deploy/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
@@ -13,7 +13,7 @@ collections:
     files:
       - name: "events"
         label: "Events List"
-        file: "_data/events.json"
+        file: "deploy/_data/events.json"
         format: json
         fields:
           - label: "Events"
@@ -44,7 +44,7 @@ collections:
     files:
       - name: "breeders"
         label: "Breeder Listings"
-        file: "_data/breeders.json"
+        file: "deploy/_data/breeders.json"
         format: json
         fields:
           - label: "Breeders"
@@ -71,7 +71,7 @@ collections:
     files:
       - name: "specialties"
         label: "Specialty Show Results"
-        file: "_data/specialties.json"
+        file: "deploy/_data/specialties.json"
         format: json
         fields:
           - label: "Specialty Shows"
